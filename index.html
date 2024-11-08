@@ -26,26 +26,7 @@ else if (field.value == '') field.value = field.defaultValue;
       </form>
       <a href="#">Sign up</a> </div>
     <!-- end of login box -->
-	  <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = "your-email@example.com"; // Replace with your email address
-    $subject = "New Contact Form Submission";
-
-    $body = "Name: $name\nPhone: $phone\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Email successfully sent!";
-    } else {
-        echo "Failed to send email.";
-    }
-}
-?>
+	 
   </div>
   <!-- end of header -->
   <div id="menu">
